@@ -1,8 +1,8 @@
-package com.mlops.Services;
+package com.mlops.services;
 
 import java.util.List;
 
-import com.mlops.Models.Project;
+import com.mlops.models.Project;
 
 public interface ProjectService {
 

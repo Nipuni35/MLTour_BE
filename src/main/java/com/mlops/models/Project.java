@@ -1,4 +1,4 @@
-package com.mlops.Models;
+package com.mlops.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.Data;
 @JsonIgnoreProperties( ignoreUnknown = true )
 public class Project {
 
-    private int id;
+    private Long id;
     private String name;
 
 }

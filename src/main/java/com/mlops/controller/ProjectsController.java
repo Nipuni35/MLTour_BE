@@ -1,10 +1,10 @@
-package com.mlops.Controller;
+package com.mlops.controller;
 
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
-import com.mlops.Models.Project;
-import com.mlops.Services.ProjectService;
+import com.mlops.models.Project;
+import com.mlops.services.ProjectService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProjectsController {
 
     @Autowired
-    ProjectService projectService;
+    private ProjectService projectService;
 
     @ApiOperation( value = "get all projects",
             response = ResponseEntity.class )
