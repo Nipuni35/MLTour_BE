@@ -1,3 +1,5 @@
 # MLTour_BE
 
-This is a spring boot application which supports the dashboard angular project working as the Backend application.
+This is a spring boot application which is working as a Backend application.
+
+Under Controller folder, You can see controllers which supports to make API requests.
