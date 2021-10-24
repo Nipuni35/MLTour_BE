@@ -8,4 +8,8 @@ public interface ProjectService {
 
     List < Project > findAll() throws Exception;
 
+    Project findById(Long projectId) throws Exception;
+
+    String createProject(String name) throws Exception;
+
 }
