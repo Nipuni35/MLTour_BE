@@ -14,9 +14,10 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 @RestController
 @RequestMapping( "/projects" )
@@ -53,11 +54,14 @@ public class ProjectsController {
     @PostMapping( produces = MediaType.APPLICATION_JSON_VALUE )
     @CrossOrigin( origins = "http://localhost:4200" )
     public ResponseEntity < String > createProject(
-            @RequestBody
-                    String name,
+            @RequestParam
+                    String projectName,
+            @RequestParam
+                    String apiServingTool,
+            MultipartHttpServletRequest multipartHttpServletRequest,
             HttpServletRequest request) throws Exception {
 
-        String gitUrl = projectService.createProject(name);
+        String gitUrl = projectService.createProject(projectName, apiServingTool, multipartHttpServletRequest);
         return new ResponseEntity <>(gitUrl, HttpStatus.OK);
     }
 
